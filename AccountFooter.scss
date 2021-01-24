@@ -1,0 +1,27 @@
+@import "../../../../styles/common.scss";
+
+.accountfooter {
+  height: 38px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 0 14px;
+  margin-top: 50px;
+
+  div {
+    right: 14px;
+    padding-left: 0px;
+    span {
+      margin-right: 10px;
+      font-family: $loginFontFamily;
+      font-size: 11px;
+      color: #757575;
+      cursor: pointer;
+
+      &:hover {
+        color: #333333;
+      }
+    }
+  }
+}

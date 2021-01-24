@@ -1,0 +1,240 @@
+@import "../../styles/common.scss";
+
+.account {
+  //border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: $logonAccountCommonFontFamily;
+
+  main {
+    width: 476px;
+    height: 877px;
+    margin: 95px 0px 60px;
+
+    .accountTitle {
+      margin-bottom: 64px;
+      font-size: 24px;
+      text-align: center;
+    }
+
+    .inputCheckboxBundle {
+      p {
+        font-size: 14px;
+        color: #737373;
+      }
+
+      .warningMsg {
+        color: red;
+      }
+
+      .inputBundle {
+        .accountTextInput {
+          height: 79px;
+          margin-bottom: 8px;
+
+          .checkemail {
+            p {
+              display: none;
+            }
+            &.success {
+              p {
+                display: block;
+              }
+            }
+          }
+
+          .checkpassword {
+            p {
+              display: none;
+            }
+            &.success {
+              p {
+                display: block;
+              }
+            }
+          }
+
+          .checkpwcheck {
+            p {
+              display: none;
+            }
+            &.success {
+              p {
+                display: block;
+              }
+            }
+          }
+
+          input {
+            height: 32px;
+            width: 100%;
+            margin: 6px 0px 2px;
+            padding: 1px 2px 7px 0px;
+            border: 0px;
+            border-bottom: 1px solid #737373;
+            font-size: 18px;
+
+            &:focus {
+              outline: none;
+              border-bottom: 3px solid #63cd80;
+            }
+          }
+        }
+      }
+
+      .checkboxBundle {
+        letter-spacing: 2px;
+        word-spacing: 2px;
+
+        .agreement {
+          font-size: 14px;
+          color: #737373;
+        }
+
+        .firstCheckboxBundle {
+          margin-top: 10px;
+
+          .specificFont {
+            font-family: $accountFontFamily700;
+            font-weight: bolder;
+          }
+
+          .adInputTitleDiv {
+            height: 20px;
+            display: flex;
+            align-items: center;
+
+            input[id="firstCheckbox"] {
+              display: none;
+            }
+
+            input[id="firstCheckbox"] + label {
+              display: inline-block;
+              width: 12px;
+              height: 12px;
+              margin-right: 10px;
+              padding: 10px;
+              border: 1px solid #737373;
+              cursor: pointer;
+            }
+
+            input[id="firstCheckbox"]:checked + label {
+              width: 5px;
+              height: 5px;
+              background-color: black;
+              outline: 2px solid #63cd80;
+            }
+          }
+
+          .adDescription {
+            height: 110px;
+            padding: 10px 0 20px;
+            line-height: 16px;
+
+            .sameWithFooterfont {
+              font-family: $loginFontFamily;
+            }
+
+            .clickDetailAdagreement {
+              border-bottom: 1px solid;
+              cursor: pointer;
+
+              &:hover {
+                color: black;
+              }
+            }
+
+            // 추후 수정 예정
+            // .detailAdDesc {
+            //   display: none;
+
+            //   &.success {
+
+            //   }
+            // }
+          }
+        }
+
+        .secondCheckboxBundle {
+          //border: 1px solid greenyellow;
+          height: 60px;
+          margin-top: 30px;
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+
+          div {
+            // border: 1px solid pink;
+            display: flex;
+            align-items: center;
+            margin-bottom: 7px;
+          }
+
+          input[id="secondCheckbox"] {
+            display: none;
+          }
+
+          input[id="secondCheckbox"] + label {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin-right: 10px;
+            padding: 10px;
+            border: 1px solid #737373;
+            cursor: pointer;
+          }
+
+          input[id="secondCheckbox"]:checked + label {
+            width: 5px;
+            height: 5px;
+            background-color: black;
+            outline: 2px solid #63cd80;
+          }
+
+          // p {
+          //   padding-left: 32px;
+          // }
+        }
+      }
+    }
+
+    .registerMovetologinBundle {
+      @include flex(center, _);
+      flex-direction: column;
+
+      .registrationBtn {
+        width: 240px;
+        height: 40px;
+        margin: 30px auto auto auto;
+        transition-property: background-color;
+        transition-duration: 0.3s;
+        transition-timing-function: linear;
+        background-color: black;
+        color: white;
+        font-size: 14px;
+        border: 0px;
+        outline: none;
+
+        &:hover {
+          background-color: #464646;
+          cursor: pointer;
+        }
+      }
+
+      p {
+        margin: 26px auto auto auto;
+        text-decoration: underline;
+        text-underline-position: under;
+        text-align: center;
+        font-size: 16px;
+        color: #737373;
+
+        &:hover {
+          color: black;
+        }
+      }
+    }
+  }
+}

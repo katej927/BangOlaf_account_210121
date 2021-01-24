@@ -1,0 +1,15 @@
+@import "../../../../styles/common.scss";
+
+#languageSelect {
+  left: 14px;
+  border: 0px;
+  font-family: $loginFontFamily;
+
+  &:focus {
+    outline: none;
+    border-bottom: 3px solid #1087dd;
+  }
+  option {
+    color: black;
+  }
+}
